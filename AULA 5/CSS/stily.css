@@ -126,7 +126,7 @@ img {
 @media(max-width:500px) {
     body {
         font-size: 16px;
-        background: yellow;
+        background: brown;
     }
 
     .menu {
