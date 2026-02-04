@@ -1,0 +1,149 @@
+/* BASE */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background: #f3f4f5;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* LAYOUT */
+.grid {
+    display: grid;
+    /* background: yellow; */
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* TOPO */
+.topo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 15px;
+}
+
+.logo {
+    justify-self: center;
+
+}
+
+.logo img {
+    width: 150px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    gap: 10px;
+    justify-content: center;
+}
+
+.menu a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background: green;
+    border-radius: 30px;
+}
+
+.menu a:hover {
+    background: black;
+    color: yellow;
+}
+
+/* CONTEUDO */
+.conteudo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.texto {
+    text-align: right;
+}
+
+.texto h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background: green;
+    border-radius: 30px;
+}
+
+.destaque {
+    grid-column: 1/-1;
+}
+
+.destaque h2 {
+    font-size: 18px;
+}
+
+.footer {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.imagem {
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* RESPONSIVEL */
+@media(max-width:900px) {
+    .conteudo {
+        grid-template-columns: 1fr;
+
+    }
+
+    .menu {
+        grid-template-columns: repeat(2, max-content);
+    }
+
+    .logo {
+        width: 100px;
+    }
+}
+
+@media(max-width:500px) {
+    body {
+        font-size: 16px;
+        background: yellow;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .menu a {
+        text-align: center;
+    }
+
+    .btn {
+        background: blue;
+    }
+
+    .menu a {
+        background: blue;
+        text-transform: uppercase;
+    }
+
+}
